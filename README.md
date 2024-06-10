@@ -8,3 +8,6 @@ SMX_API_URL=https://{SMX_IP}:{API_PORT}/rest/v1/
 SMX_USERNAME={username}
 SMX_PASSWORD={password}
 ```
+You will also need to install dependancies.
+
+`pip install -r requirements.txt`
