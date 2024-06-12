@@ -50,13 +50,13 @@ def query_alarms():
         print(f'Request exception occurred: {err}')
     return(data)
 
-alarms = query_alarms()
+alarm_list = query_alarms()
 
 """
 Basic example of parsing alarms.
 Ideally you would have more logic in place to alert/discard based on alarm type/severity...ect
 """
-for alarm in alarms:
+for alarm in alarm_list:
     if alarm['severity'] == "MAJOR":
         # Here you would call a function to alert.
         for i in alarm:
