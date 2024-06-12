@@ -51,5 +51,13 @@ def query_alarms():
     return(data)
 
 alarms = query_alarms()
+
+"""
+Basic example of parsing alarms.
+Ideally you would have more logic in place to alert/discard based on alarm type/severity...ect
+"""
 for alarm in alarms:
-    print(alarm)
+    if alarm['severity'] == "MAJOR":
+        # Here you would call a function to alert.
+        for i in alarm:
+            print(f"{i:30} {alarm[i]}")
